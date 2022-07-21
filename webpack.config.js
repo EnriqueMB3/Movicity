@@ -11,7 +11,7 @@ module.exports = (env, argv) => {
         plugins:[
             new HtmlWebpackPlugin({
                 template: 'src/index.html',
-                // favicon: "./src/assets/zoo.ico"
+                favicon: "./movicity.ico"
             })
         ],
         module:{
@@ -28,6 +28,17 @@ module.exports = (env, argv) => {
                         ]
                     }
                 },
+                {
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                      // Creates `style` nodes from JS strings
+                      "style-loader",
+                      // Translates CSS into CommonJS
+                      "css-loader",
+                      // Compiles Sass to CSS
+                      "sass-loader",
+                    ],
+                  },
                 {
                     test:   /\.css$/,
                     use: ['style-loader', 'css-loader']
