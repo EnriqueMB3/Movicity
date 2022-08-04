@@ -5,14 +5,14 @@ import { ListPeople } from "../components/people/ListPeople";
 import { ListTopRanked } from "../components/top-ranked-list/ListTopRanked";
 import { ListMovieTheaters } from "../components/vertical-list-movie/ListMovieTheaters";
 
-export const HomeScreen = () => {
+export const TvScreen = () => {
   return (
     <>
-      <HeaderHome/>
-      <ListMovieTheaters/>
-      <ListTitleHorizontal/>
-      <ListPeople/>
-      <ListTopRanked/>
-    </>
-  );
-};
+    <HeaderHome/>
+    <ListMovieTheaters/>
+    <ListTitleHorizontal/>
+    <ListPeople/>
+    <ListTopRanked/>
+  </>
+  )
+}

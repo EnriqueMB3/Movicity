@@ -4,15 +4,14 @@ import { ListTitleHorizontal } from "../components/horizontal-list-title/ListTit
 import { ListPeople } from "../components/people/ListPeople";
 import { ListTopRanked } from "../components/top-ranked-list/ListTopRanked";
 import { ListMovieTheaters } from "../components/vertical-list-movie/ListMovieTheaters";
-
-export const HomeScreen = () => {
+export const MovieScreen = () => {
   return (
     <>
-      <HeaderHome/>
-      <ListMovieTheaters/>
-      <ListTitleHorizontal/>
-      <ListPeople/>
-      <ListTopRanked/>
-    </>
-  );
-};
+    <HeaderHome/>
+    <ListMovieTheaters/>
+    <ListTitleHorizontal/>
+    <ListPeople/>
+    <ListTopRanked/>
+  </>
+  )
+}

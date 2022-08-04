@@ -1,8 +1,5 @@
 import styled from "styled-components";
 
-
-
-
 export const Header = styled.header`
      width: auto;
     height: 83vh;
@@ -54,6 +51,14 @@ export const HeaderTitleSection = styled.section`
     font-size: 1.2em;
     margin: 1em 0 1em 0;
     text-shadow: 2px 2px 5px #16151588;  
+    }
+    @media (max-width: 720px) {
+        margin-left: 2em;
+        p{
+            max-width: calc(100% - 10%);
+            font-size: 1em;
+            margin: 1em 0 1em 0;
+        }
     }
 `
 

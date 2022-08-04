@@ -1,21 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import LogoYellow from '../../assets/logo_yellow.png'
 import { Nav } from './styles'
 import { FaSearch } from "react-icons/fa";
+import { Link, NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
     <Nav>
         <ul >
             <li>
-            <img src={LogoYellow} alt="" className="logo"/>
+                <NavLink to='/'> 
+                    <img src={LogoYellow} alt="" className="logo"/>
+                </NavLink>
             </li>
             <li>
-            <a >Movie</a>
+            <NavLink to='/Movies'>Movie</NavLink>
             </li>
             <li>
-                <a>Tv</a>
+                <NavLink to='/Tv'>Tv</NavLink>
             </li>
             <li>
                 <i className="fa-solid fa-magnifying-glass"></i>

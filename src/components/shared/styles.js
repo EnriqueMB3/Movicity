@@ -22,10 +22,13 @@ export const HeaderSection = styled.div`
         color: var(--main-yellow);
     margin-left: .5em;
     }
+    @media (max-width: 720px) {
+        margin-left: 2em;
+    }
 `
 
 export const PieChart = styled.svg`
-display: block;
+  display: block;
   height: 5em;
   background-color: #262424;
   border-radius: 50%;
@@ -34,8 +37,8 @@ display: block;
   z-index:1000;
   .circle-bg{
     fill: none;
-  stroke: #4F4F4F;
-  stroke-width: 3.8;
+    stroke: #4F4F4F;
+    stroke-width: 3.8;
   }
   .circle{
     fill: none;
@@ -50,6 +53,9 @@ display: block;
   font-weight: bold;
   text-anchor: middle;
 }
+   @media (max-width: 720px) {
+      height: 4em;
+    }
   /* @keyframes progress {
   0% {
     stroke-dasharray: 0 100;

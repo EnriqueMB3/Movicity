@@ -7,11 +7,11 @@ export const ListHorizontal = styled.ul`
     gap: 1em;
     width: auto; 
     overflow: auto;
-    height: 17em;
+    /* height: 17em; */
     scrollbar-width: none;
     overflow-y: scroll;
     ::-webkit-scrollbar {
-    display: none;
+        display: none;
     }
     li:first-child {
         margin-left: 4em;
@@ -20,5 +20,13 @@ export const ListHorizontal = styled.ul`
         height: 16em;
         border-radius: 4px;
         cursor: pointer;
+    }
+    @media (max-width: 720px) {
+        li:first-child {
+            margin-left: 2em;
+        }
+        li img{
+            height: 12em;
+        }
     }
 `

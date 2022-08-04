@@ -13,6 +13,11 @@ export const ListPersonImages = styled.ul`
     ::-webkit-scrollbar{
         display: none;
     }
+    @media (max-width: 720px) {
+        li:first-child {
+            margin-left: 2em;
+        }
+    }
 `
 
 export const PeopleProfile = styled.div`
@@ -34,5 +39,10 @@ export const PeopleProfile = styled.div`
     }
     h2{
         font-size: 1.2em;
+    }
+    @media (max-width: 720px) {
+        height: 20em;
+        width: 12em;
+        padding: 1em;
     }
 `
