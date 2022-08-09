@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaMedal } from 'react-icons/fa';
 import { HeaderSection, SectionBody } from '../shared/styles';
+import { SkeletonTopRanked } from './SkeletonTopRanked';
 import { ListTopRankedImages } from './styles';
 import { TopRanked } from './TopRanked';
 

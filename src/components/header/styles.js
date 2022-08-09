@@ -11,6 +11,11 @@ export const Header = styled.header`
     background-attachment:fixed;
     display: grid;
     gap: 0px;
+    @media (max-width: 720px) {
+        background-image: url(${({imageVertical}) => imageVertical });
+        background-position-y: top;
+        background-position-x: center;
+    }
 `
 
 
@@ -52,12 +57,21 @@ export const HeaderTitleSection = styled.section`
     margin: 1em 0 1em 0;
     text-shadow: 2px 2px 5px #16151588;  
     }
+    h1{
+            display:none;
+            color:white;
+            font-weight:bolder;
+            font-size:32pt;
+    }
     @media (max-width: 720px) {
         margin-left: 2em;
         p{
             max-width: calc(100% - 10%);
             font-size: 1em;
             margin: 1em 0 1em 0;
+        }
+        h1{
+            display:block;
         }
     }
 `

@@ -2,6 +2,7 @@ import React from 'react'
 import { FaTheaterMasks } from 'react-icons/fa'
 import { HeaderSection, SectionBody } from '../shared/styles'
 import { MovieTheaters } from './MovieTheaters'
+import { SkeletonTheaters } from './SkeletonTheaters'
 import { ListVerticalMovie } from './styles'
 
 

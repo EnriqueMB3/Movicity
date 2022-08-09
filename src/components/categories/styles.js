@@ -36,6 +36,7 @@ export const  ControlBadges = styled.ul`
             margin: auto;
         }
     }
+    
 `
 export const ControlCategories = styled.div`
     display: grid;
