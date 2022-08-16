@@ -28,12 +28,12 @@ export const Sidebar = ({isShowing, toggle}) => {
                 </SidebarLink>
                 </SidebarItem>
                 <SidebarItem>
-                <SidebarLink to='/' onClick={toggleShow} >
+                <SidebarLink to='/Movies' onClick={toggleShow} >
                         Movie
                 </SidebarLink>
                 </SidebarItem>
                 <SidebarItem>
-                <SidebarLink to='/' onClick={toggleShow} >
+                <SidebarLink to='/Tv' onClick={toggleShow} >
                         Tv
                 </SidebarLink>
                 </SidebarItem>

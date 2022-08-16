@@ -46,7 +46,7 @@ export const ListHorizontal = styled.ul`
             background-color:#383535e6;
             background-repeat: no-repeat;
             animation: shimmer 1s linear infinite;
-            background-image: linear-gradient(to right, #1e1d1d00 0%, rgba(0,0,0,0.10) 20%, #524e4e73 40%, #302e2e 100%);
+            background-image: linear-gradient(to right, #302e2e 0%, rgba(0,0,0,0.10) 20%, #524e4e73 40%, #302e2e 100%);
         }
     }
     ::-webkit-scrollbar {

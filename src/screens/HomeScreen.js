@@ -6,6 +6,9 @@ import { ListTopRanked } from "../components/top-ranked-list/ListTopRanked";
 import { ListMovieTheaters } from "../components/vertical-list-movie/ListMovieTheaters";
 
 export const HomeScreen = () => {
+
+  
+
   return (
     <>
       <HeaderHome/>

@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaPlayCircle } from 'react-icons/fa';
+import { fetchConToken } from '../../helpers/fetch';
 import { HeaderSection, SectionBody } from '../shared/styles';
 import { SkeletonTitle } from './SkeletonTitle';
 import { ListHorizontal } from './styles';
 import { Title } from './Title';
 
 
-export const ListTitleHorizontal = () => {
+export const ListTitleHorizontal = ({type='tv', category='on_the_air'}) => {
+
+
+    const [moviesdb, setMoviesdb] = useState([])
+    
+    const getMovies = async ()=> {
+        const response = await fetchConToken(`${type}/${category}`);
+        setMoviesdb(response.results)
+    }
+
+    useEffect(() => {
+      getMovies();
+    }, [])
+    
+
     const movies =  Array.from(Array(10).keys());;
     return (
         <SectionBody>
@@ -14,8 +29,12 @@ export const ListTitleHorizontal = () => {
                 <h2>On Air Today<FaPlayCircle/> </h2>
             </HeaderSection>
             <ListHorizontal>
-                {
-                    movies.map((_, idx)=> <Title key={idx}/>)
+            {
+                    moviesdb.length == 0? 
+                        movies.map( (_, idx) => <SkeletonTitle key={idx}/> )
+                    :
+                        moviesdb.map( (title, idx) => <Title key={idx} title={title}/> )
+
                 }
             </ListHorizontal>
         </SectionBody>

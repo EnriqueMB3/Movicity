@@ -2,11 +2,15 @@ import React from 'react'
 import { PrimaryButtoon } from '../../styles/Buttons'
 import { HeaderTitleSection } from './styles'
 
-export const HeaderTitle = () => {
+export const HeaderTitle = ({original_title, logo, overview}) => {
+
+
   return (
     <HeaderTitleSection>
-        <h1>The Batman</h1>
-        <p>Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.</p>
+        {
+          (logo === 'undefined')? <h1>{original_title}</h1>: <img src={ `http://image.tmdb.org/t/p/original/${logo}` }></img> 
+        }
+        <p>{overview}</p>
         <PrimaryButtoon className="primary-button">Details</PrimaryButtoon>
     </HeaderTitleSection>
   )

@@ -5,7 +5,7 @@ export const ListTopRankedImages = styled.ul`
     width: auto; 
     overflow: auto;
     gap: 1em;
-    height: 42em;
+    height: 31em;
     scrollbar-width: none;
     li:first-child {
         margin-left: 4em;
@@ -21,12 +21,12 @@ export const ListTopRankedImages = styled.ul`
         background-image: linear-gradient(to right, #1e1d1d00 0%, rgba(0,0,0,0.10) 20%, #524e4e73 40%, #302e2e 100%);
     }
     @media (max-width: 720px) {
-        height: 25em;
+        height: 22em;
         li:first-child {
             margin-left: 2em;
         }
         li div{
-            height: 24em;
+            height: 21em;
             width: 14em;
         }
        
@@ -54,17 +54,17 @@ export const ListTopRankedImages = styled.ul`
 `
 
 export const TopRakedImage = styled.div`
-    height: 40em;
-    width: 25em;
+    height: 30em;
+    width: 20em;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(${({image})=> image });
     display: flex;
+    cursor:pointer;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-start;
     @media (max-width: 720px) {
-        height: 24em;
+        height: 23em;
         width: 14em;
 
     }

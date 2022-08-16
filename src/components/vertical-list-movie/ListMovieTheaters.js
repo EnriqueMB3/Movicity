@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaTheaterMasks } from 'react-icons/fa'
+import { fetchConToken } from '../../helpers/fetch'
 import { HeaderSection, SectionBody } from '../shared/styles'
 import { MovieTheaters } from './MovieTheaters'
 import { SkeletonTheaters } from './SkeletonTheaters'
 import { ListVerticalMovie } from './styles'
 
 
-export const ListMovieTheaters = () => {
+export const ListMovieTheaters = ({type='movie', category='now_playing'}) => {
+
+
+    const [moviesdb, setMoviesdb] = useState([])
+    
+    const getMovies = async ()=> {
+        const response = await fetchConToken(`${type}/${category}`);
+        setMoviesdb(response.results)
+    }
+
+    useEffect(() => {
+      getMovies();
+    }, [])
+    
+
 
     const movies =  Array.from(Array(10).keys());;
+
     return (
         <SectionBody>
             <HeaderSection>
@@ -16,7 +32,11 @@ export const ListMovieTheaters = () => {
             </HeaderSection>
             <ListVerticalMovie>
                 {
-                    movies.map( (_, idx) => <MovieTheaters key={idx}/> )
+                    moviesdb.length == 0? 
+                        movies.map( (_, idx) => <SkeletonTheaters key={idx}/> )
+                    :
+                        moviesdb.map( (movie, idx) => <MovieTheaters key={idx} movie={movie}/> )
+
                 }
             </ListVerticalMovie>
         </SectionBody>

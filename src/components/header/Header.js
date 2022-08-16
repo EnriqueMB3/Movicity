@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Navbar } from '../nav/Navbar'
 import { Degrade } from './Degrade'
 import { HeaderTitle } from './HeaderTitle'
@@ -7,17 +7,35 @@ import Cartelera1 from '../../assets/cartelera1.jpg'
 import { Header } from './styles'
 import useSidebar from '../../hooks/useSidebar'
 import { Sidebar } from '../sidebar/Sidebar'
-export const HeaderHome = () => {
+import { fetchConToken } from '../../helpers/fetch'
+import { imagesMovie } from '../../helpers/imagesMovie'
+export const HeaderHome = ({type= 'movie',  category = 'popular'}) => {
 
   const { isShowing, toggle } = useSidebar();
-  return (
-    <Header image={Background3} imageVertical= {Cartelera1}>
+
+const [moviedb, setMoviedb] = useState()
+
+  const innerFunction = useCallback(async() => {
+      const responseMovies = await fetchConToken(`${type}/${category}`).then((res)=> res.results[0]) ;
+      const {original_title, overview, id, name} = responseMovies
+      const MovieImage = await fetchConToken(`${type}/${id}/images`).then((res)=> imagesMovie(res));
+      const movieImagesDesc = {name, original_title, overview, id, ...MovieImage};
+      return movieImagesDesc;
+    });
+
+    useEffect(() => {
+        innerFunction().then((res)=> setMoviedb(res) );
         
+    }, []);
+    
+
+  return (
+    <Header image={`${ moviedb && `http://image.tmdb.org/t/p/original/${moviedb.backdrop}`   } `}  imageVertical={`${ moviedb&& `http://image.tmdb.org/t/p/original/${moviedb.poster}`  } `}  >
       <Degrade header/>
       <Sidebar isShowing={isShowing} toggle={toggle} />
 
       <Navbar  isShowing={isShowing}toggle={toggle}/>
-      <HeaderTitle/>
+      <HeaderTitle logo={`${moviedb && `${moviedb.logo}`}`} overview={ moviedb && moviedb.overview } original_title={moviedb && (moviedb.original_title || moviedb.name)}/>
       <Degrade header={false} />
 
     </Header>

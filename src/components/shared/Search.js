@@ -8,7 +8,7 @@ import { SearchBar } from './styles'
 export const Search = ({number}) => {
 
 
-  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(true);
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
   const onClick = () => {
     setIsComponentVisible(!isComponentVisible)

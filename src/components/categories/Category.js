@@ -1,10 +1,11 @@
 import React from 'react'
-import { FaHeart } from "react-icons/fa";
 
-export const Category = () => {
+export const Category = ({category}) => {
+
+  const {name, icon} = category;
   return (
     <li>
-      <span><FaHeart/> Romance</span>
+      <span>{icon} {name}</span>
     </li>
   )
 }

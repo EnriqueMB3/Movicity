@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 const path  = require('path')
 module.exports = (env, argv) => {
     const {mode}  = argv
@@ -12,6 +13,10 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: 'src/index.html',
                 favicon: "./movicity.ico"
+            }),
+            new Dotenv({
+                path: './.env', // Path to .env file (this is the default)
+                safe: true, // load .env.example (defaults to "false" which does not use dotenv-safe)
             })
         ],
         module:{

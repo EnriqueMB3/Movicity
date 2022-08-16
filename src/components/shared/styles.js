@@ -23,7 +23,16 @@ export const HeaderSection = styled.div`
     margin-left: .5em;
     }
     @media (max-width: 720px) {
-        margin-left: 2em;
+      h2{
+        color: white;
+    font-size: 1.5em;
+    }
+     svg{
+    margin-left: .25em;
+    }
+    
+    margin: .5em .5em .5em 2em;
+
     }
 `
 export const SearchBar = styled.div`
@@ -123,7 +132,7 @@ export const PieChart = styled.svg`
   border-radius: 50%;
   position: relative;
   top: 3px;
-  z-index:1000;
+  z-index:99;
   .circle-bg{
     fill: none;
     stroke: #4F4F4F;

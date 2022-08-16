@@ -1,10 +1,11 @@
 import React from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { Categories } from './Categories';
 import { Category } from './Category';
 import {  ControlBadges, ControlCategories } from './styles'
 
 export const ListCategory = () => {
-  const category =  Array.from(Array(9).keys());;
+  
 
   return (
 
@@ -12,7 +13,7 @@ export const ListCategory = () => {
         <FaChevronLeft></FaChevronLeft>
           <ControlBadges>
             {
-              category.map((_, idx)=> <Category key={idx}/>)
+              Categories[0].map((category, idx)=> <Category key={idx} category={category} />)
             }
           </ControlBadges>
         <FaChevronRight></FaChevronRight>

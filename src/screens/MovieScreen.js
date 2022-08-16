@@ -7,7 +7,7 @@ import { ListMovieTheaters } from "../components/vertical-list-movie/ListMovieTh
 export const MovieScreen = () => {
   return (
     <>
-    <HeaderHome/>
+    <HeaderHome type="movie" category="now_playing"/>
     <ListMovieTheaters/>
     <ListTitleHorizontal/>
     <ListPeople/>

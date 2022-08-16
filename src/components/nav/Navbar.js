@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LogoYellow from '../../assets/logo_yellow.png'
 import { Nav } from './styles'
 import { FaBars } from "react-icons/fa";
@@ -7,29 +7,28 @@ import { Search } from '../shared/Search';
 
 export const Navbar = ({isShowing, toggle}) => {
 
-    // const [navbar, setNavbar] = useState(false);
-    // const [black, setColor] = useState(false);
+    const [headerColor, setHeaderColor] = useState("transparent")
+    useEffect(() => {
+        window.addEventListener('scroll', listenScrollEvent);
+        window.addEventListener('load', listenScrollEvent);
 
-    // const changeBackground = () => {
-    //     if(window.scrollY >= 80){
-    //         setNavbar(true)
-    //     }else{
-    //         setNavbar(false)
-    //     }
-    // }
+      
+        return () => {
+            window.removeEventListener('scroll', listenScrollEvent);
+            window.removeEventListener('load', listenScrollEvent);
 
-    // const changeColor = () => {
-    //     if(window.scrollY >= 80){
-    //         setColor(true)
-    //     }else{
-    //         setColor(false)
-    //     }
-    // }
-    
-    // window.addEventListener('scroll',changeBackground);
-    // window.addEventListener('black',changeColor);
+        }
+          
 
+      }, []);
   
+      const listenScrollEvent = (event) => {
+        if (window.scrollY < 70) {
+            return setHeaderColor("transparent")
+        } else if (window.scrollY > 280) {
+            return setHeaderColor("#1a1a1a")
+        } 
+      }
 
 
     const toggleShow = () =>{
@@ -37,25 +36,24 @@ export const Navbar = ({isShowing, toggle}) => {
     }
   
   return (
-    <Nav Show={!isShowing} >
+    <Nav Show={!isShowing} backColor={headerColor}>
         <ul >
             <li>
-                <NavLink to='/'> 
+                <NavLink to='/' > 
                     <img src={LogoYellow} alt="" className="logo"/>
                 </NavLink>
             </li>
             <li>
-                <NavLink to='/Movies'>Movie</NavLink>
+                <NavLink   to='/Movies'>Movie</NavLink>
             </li>
             <li>
-                <NavLink to='/Tv'>Tv</NavLink>
+                <NavLink   to='/Tv'>Tv</NavLink>
             </li>
             <li>
                 <Search/>
             </li>
             <li>
-            <FaBars  onClick={toggleShow}/>
-
+                <FaBars  onClick={toggleShow}/>
             </li>
         </ul>
     </Nav>

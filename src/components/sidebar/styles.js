@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -11,9 +11,11 @@ export const SidebarContainer  = styled.nav`
     top: 0;
     left: 0;
     background-color: #0d0d0d;
-    opacity: .95;
-    transition: 0.3s ease-in-out;
+    /* transition: 0.3s ease-in-out; */
     z-index:999;
+    animation: apper;
+    animation-duration: .3s;
+
     svg{
         color: var(--main-yellow);
         position: fixed;
@@ -31,10 +33,18 @@ export const SidebarContainer  = styled.nav`
        display:${({Show}) =>  Show? 'block' : 'none'  };
     }
 
+    @keyframes apper {
+        from {
+            opacity:0;
+        }
 
+        to {
+            opacity:.95;
+        }
+    }
 `
 
-export const SidebarLink = styled(Link)`
+export const SidebarLink = styled(NavLink)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,6 +54,7 @@ export const SidebarLink = styled(Link)`
     text-decoration: none;
     color: #fff;
     cursor: pointer;
+
     &:hover {
         color: var(--main-yellow);
         transition: 0.2s ease-in-out;
@@ -59,7 +70,6 @@ export const SidebarMenu = styled.ul`
     justify-content: center;
     @media screen and (min-width: 600px) {
         display:flex;
-    
     }
 `
 
@@ -72,4 +82,9 @@ export const SidebarWrap  = styled.div`
 
 export const SidebarItem = styled.li`
     margin-bottom: 1.5rem;
+    .active{
+        color: var(--main-yellow) !important;
+        font-weight:bold !important;
+    }
+
 `
