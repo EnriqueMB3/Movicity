@@ -21,6 +21,15 @@ export const  ControlBadges = styled.ul`
         color: var(--main-yellow);
         margin-right: 8px;
     }
+    .active{
+        background-color: var(--main-yellow);
+        color: var(--gray-background);
+        font-weight: bold;
+        span svg{
+            color: var(--gray-background);
+        }
+
+    }
     @media (max-width: 720px) {
         display: grid;
         grid-template-columns: auto auto;  
@@ -79,9 +88,10 @@ export const ControlPages = styled.div`
 export const CircleControl = styled.div`
     height: 10px;
     width: 10px;
-    background-color: var(--gray-controls);
+    background-color: white;
     border-radius: 50%;
-    opacity: .5;
+    opacity: ${({active}) =>   active? '.8' : '.2'  }
+
 `
 
 

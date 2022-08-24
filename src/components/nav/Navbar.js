@@ -7,8 +7,10 @@ import { Search } from '../shared/Search';
 
 export const Navbar = ({isShowing, toggle}) => {
 
+
     const [headerColor, setHeaderColor] = useState("transparent")
     useEffect(() => {
+        listenScrollEvent();
         window.addEventListener('scroll', listenScrollEvent);
         window.addEventListener('load', listenScrollEvent);
 

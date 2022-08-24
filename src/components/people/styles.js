@@ -52,7 +52,7 @@ export const ListPersonImages = styled.ul`
 export const PeopleProfile = styled.div`
     height: 30em;
     width: 20em;
-    background-image:linear-gradient(to bottom, #ffff0000, #c32dd169, #000000de), url(${({image}) => image });
+    background-image:linear-gradient(to bottom, #ffff0000, transparent, #000000de), url(${({image}) => image });
     border-radius: 4px;
     cursor: pointer;
     background-repeat: no-repeat;

@@ -8,17 +8,6 @@ export const CategoryStartScreen = () => {
     <BadgesSection>
       <h3 className="instruction">Select three categories before start</h3>
       <ListCategory/>
-
-      <ControlPages>
-        <CircleControl/>
-        <CircleControl/>
-        <CircleControl/>
-      </ControlPages>
-
-      <div>
-        <PrimaryButtoon center={true} >Start</PrimaryButtoon>
-        <h4>1/3</h4>
-      </div>
     </BadgesSection>
   )
 }

@@ -1,122 +1,117 @@
-import { FaBrain, FaDragon, FaHeart, FaLandmark, FaLeaf, FaMusic, FaPalette, FaPizzaSlice, FaShieldAlt, FaVolleyballBall } from "react-icons/fa";
+import { FaBook, FaBookReader, FaBrain, FaCat, FaDragon, FaGlobeEurope, FaHatCowboySide, FaHeart, FaLandmark, FaLeaf, FaMusic, FaPalette, FaPizzaSlice, FaRedhat, FaRegGrinSquintTears, FaRocket, FaShieldAlt, FaSkull, FaSpaceShuttle, FaSpider, FaTheaterMasks, FaVolleyballBall } from "react-icons/fa";
 
 export const Categories = [
     [
         {
+            id:9840,
             name: 'Romance',
-            icon: <FaHeart/>
+            icon: <FaHeart/>,
+            selected: false
         },
         {
+            id:2800,
             name: 'Psychology',
-            icon:  <FaBrain/>
+            icon:  <FaBrain/>,
+            selected: false
         },
         {
+            id: 14893,
             name: 'Art',
-            icon: <FaPalette/>
+            icon: <FaPalette/>,
+            selected: false
         },
         {
+            id:293198,
             name:'Fantasy',
-            icon: <FaDragon/>
+            icon: <FaDragon/>,
+            selected: false
         },
         {
+            id:9715,
             name: 'SuperHero',
-            icon: <FaShieldAlt/>
+            icon: <FaSpider/>,
+            selected: false
         },
         {
+            id:18330,
             name: 'Nature',
-            icon: <FaLeaf/>
+            icon: <FaLeaf/>,
+            selected: false
         },
         {
+            id:4344,
             name: 'Musical',
-            icon: <FaMusic/>
+            icon: <FaMusic/>,
+            selected: false
         },
         {
+            id:6075,
             name:'Sports',
-            icon: <FaVolleyballBall/>
+            icon: <FaVolleyballBall/>,
+            selected: false
         },
         {
+            id: 6078,
             name: 'Politics',
-            icon: <FaLandmark/>
+            icon: <FaLandmark/>,
+            selected: false
         }
     ],
     [
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:292753,
+            name: 'Drama',
+            icon: <FaTheaterMasks/>,
+            selected: false
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:8087,
+            name: 'Horror',
+            icon: <FaSkull/>,
+            selected: false
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:289153,
+            name: 'Comedy',
+            icon: <FaRegGrinSquintTears/>,
+            selected: false
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:295505,
+            name: 'Western',
+            icon: <FaHatCowboySide/>,
+            selected: false   
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:296647,
+            name: 'Science Fic.',
+            icon: <FaRocket/>,
+            selected: false
+            
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:282080,
+            name: 'Documental',
+            icon: <FaBookReader/>,
+            selected: false
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:282633,
+            name: 'History',
+            icon: <FaBook/>,
+            selected: false
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
+            id:285725,
+            name: 'Animals',
+            icon: <FaCat/>,
+            selected: false
         },
         {
-            name: 'Politics',
-            icon: <FaLandmark/>
-        },
-        {
-            name: 'Politics',
-            icon: <FaLandmark/>
-        }
-    ],
-    [
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },        
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
-        },
-        {
-            name: 'Pizzas',
-            icon: <FaPizzaSlice/>
+            id:9882,
+            name: 'Space',
+            icon: <FaGlobeEurope/>,
+            selected: false
         }
     ]
 

@@ -7,7 +7,7 @@ import { ListHorizontal } from './styles';
 import { Title } from './Title';
 
 
-export const ListTitleHorizontal = ({type='tv', category='on_the_air'}) => {
+export const ListTitleHorizontal = ({title = 'On Air', type='tv', category='on_the_air', icon = <FaPlayCircle/>}) => {
 
 
     const [moviesdb, setMoviesdb] = useState([])
@@ -26,7 +26,7 @@ export const ListTitleHorizontal = ({type='tv', category='on_the_air'}) => {
     return (
         <SectionBody>
             <HeaderSection>
-                <h2>On Air Today<FaPlayCircle/> </h2>
+                <h2>{title}{icon} </h2>
             </HeaderSection>
             <ListHorizontal>
             {

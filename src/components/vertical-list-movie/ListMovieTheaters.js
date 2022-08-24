@@ -7,7 +7,7 @@ import { SkeletonTheaters } from './SkeletonTheaters'
 import { ListVerticalMovie } from './styles'
 
 
-export const ListMovieTheaters = ({type='movie', category='now_playing'}) => {
+export const ListMovieTheaters = ({title= 'In Theaters' ,type='movie', category='now_playing', icon = <FaTheaterMasks/>}) => {
 
 
     const [moviesdb, setMoviesdb] = useState([])
@@ -28,7 +28,7 @@ export const ListMovieTheaters = ({type='movie', category='now_playing'}) => {
     return (
         <SectionBody>
             <HeaderSection>
-                <h2>In Theaters <FaTheaterMasks/> </h2>
+                <h2>{title} {icon} </h2>
             </HeaderSection>
             <ListVerticalMovie>
                 {
