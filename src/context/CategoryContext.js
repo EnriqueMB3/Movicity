@@ -18,6 +18,4 @@ export const CategoryProvider = ({children})=> {
             {children}
         </CategoryContext.Provider>
     )
-
-
 }

@@ -17,7 +17,6 @@ export const AppRouter = () => {
             </CategoryBrowserSelect>
           }
         />
-        
         <Route
           path="/*" element={
             <MoviesRouter>
@@ -25,8 +24,6 @@ export const AppRouter = () => {
             </MoviesRouter>
           }
         />
-        
-          
       </Routes>
     </BrowserRouter>
   )

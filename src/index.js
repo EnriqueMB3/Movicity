@@ -5,5 +5,4 @@ import { MovieApp } from '../MovieApp';
 
 
 const root = ReactDOM.createRoot(document.getElementById('app'))
-root.render(
-<MovieApp/>)
+root.render(<MovieApp/>)
