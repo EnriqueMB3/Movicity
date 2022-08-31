@@ -35,7 +35,7 @@ export const  ControlBadges = styled.ul`
         grid-template-columns: auto auto;  
         align-items: center;
         gap: 1.5em;
-        margin: 1em 2em .5em 2em;
+        margin: 1em 1em .5em 1em;
         li{
             min-width: 125px;
             font-size: small;

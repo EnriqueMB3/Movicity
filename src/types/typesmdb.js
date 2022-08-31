@@ -9,4 +9,5 @@ export const typesdb = {
     onAir: 'on_the_air',
     airingToday: 'airing_today',
     person: 'person',
+    keyword: 'keyword'
 }

@@ -7,10 +7,8 @@ import { GlobalSyles } from './src/styles/GlobalStyles'
 export const MovieApp = () => {
   return (
   <CategoryProvider>
-      <BrowserRouter>
         <GlobalSyles/>
           <AppRouter />
-      </BrowserRouter>
   </CategoryProvider>
   )
 }

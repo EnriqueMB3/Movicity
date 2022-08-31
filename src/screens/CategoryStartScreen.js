@@ -1,7 +1,6 @@
 import React from 'react'
 import { ListCategory } from '../components/categories/ListCategory'
-import { BadgesSection, CircleControl, ControlPages } from '../components/categories/styles'
-import { PrimaryButtoon } from '../styles/Buttons'
+import { BadgesSection,  } from '../components/categories/styles'
 
 export const CategoryStartScreen = () => {
   return (
