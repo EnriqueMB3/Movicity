@@ -30,7 +30,7 @@ const [moviedb, setMoviedb] = useState()
     
 
   return (
-    <Header image={`${ moviedb && `http://image.tmdb.org/t/p/original/${moviedb.backdrop}`   } `}  imageVertical={`${ moviedb&& `http://image.tmdb.org/t/p/original/${moviedb.poster}`  } `}  >
+    <Header image={`${moviedb && `http://image.tmdb.org/t/p/original/${moviedb.backdrop}`} `} imageVertical={`${moviedb && `http://image.tmdb.org/t/p/w500/${moviedb.poster}`} `}  >
       <Degrade header/>
       <Sidebar isShowing={isShowing} toggle={toggle} />
 

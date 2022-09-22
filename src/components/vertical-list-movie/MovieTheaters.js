@@ -8,7 +8,7 @@ export const MovieTheaters = ({movie}) => {
 
   return (
     <li>
-        <img src={`http://image.tmdb.org/t/p/original/${poster_path}`} alt="cartelera"/>
+      <img src={`http://image.tmdb.org/t/p/w500/${poster_path}`} alt="cartelera" />
     </li>
   )
 }

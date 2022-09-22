@@ -8,7 +8,7 @@ export const HeaderTitle = ({original_title, logo, overview}) => {
   return (
     <HeaderTitleSection>
         {
-          (logo === 'undefined')? <h1>{original_title}</h1>: <img src={ `http://image.tmdb.org/t/p/original/${logo}` }></img> 
+        (logo === 'undefined') ? <h1>{original_title}</h1> : <img src={`http://image.tmdb.org/t/p/w500/${logo}`}></img> 
         }
         <p>{overview}</p>
         <PrimaryButtoon className="primary-button">Details</PrimaryButtoon>

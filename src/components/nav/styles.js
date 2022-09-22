@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
     color: white;
-    z-index: 2;
+    z-index: 1000;
     padding: 0;
     margin: 0;
         ul{

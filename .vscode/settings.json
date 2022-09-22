@@ -1,0 +1,12 @@
+{
+    "editor.formatOnType": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnPaste": false,
+    "prettier.bracketSameLine": true,
+    "prettier.embeddedLanguageFormatting": "off",
+    "prettier.enable": false,
+    "prettier.jsxSingleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.useEditorConfig": false,
+    "editor.formatOnSave": true
+}

@@ -36,18 +36,14 @@ export const ListTopRankedImages = styled.ul`
     height:5px
     }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #1a1a1a; 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 5px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
@@ -56,6 +52,7 @@ export const ListTopRankedImages = styled.ul`
 export const TopRakedImage = styled.div`
     height: 30em;
     width: 20em;
+    padding:.5em;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url(${({image})=> image });

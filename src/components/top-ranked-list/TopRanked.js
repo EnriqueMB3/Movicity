@@ -9,7 +9,7 @@ export const TopRanked = ({topRanked}) => {
 
   return (
     <li>
-        <TopRakedImage image={`http://image.tmdb.org/t/p/original/${poster_path}`}>
+      <TopRakedImage image={`http://image.tmdb.org/t/p/w500/${poster_path}`}>
                 <Chart vote_average={vote_average}/>
         </TopRakedImage>
     </li>
