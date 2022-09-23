@@ -7,7 +7,6 @@ export const ListVerticalMovie = styled.ul`
     gap: 1em;
     width: auto; 
     overflow: auto;
-    /* height: 37em; */
     scrollbar-width: none;
     overflow-y: scroll;
     li:first-child {
@@ -51,18 +50,15 @@ export const ListVerticalMovie = styled.ul`
     height:5px
     }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #1a1a1a; 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #444;
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
