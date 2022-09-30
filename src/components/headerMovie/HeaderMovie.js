@@ -1,33 +1,45 @@
 import React from 'react'
+import { FaStopwatch } from 'react-icons/fa'
+import { date } from '../../helpers/date'
 import { Chart } from '../shared/Chart'
+import { ListGenre, MovieHeader } from './styles'
 
-export const HeaderMovie = () => {
+export const HeaderMovie = ({ movie, type }) => {
 
-
+    const { release_date, overview, title, vote_average, genres, production_countries, runtime, name } = movie;
 
     return (
-        <section class="header-movie">
-            <Chart vote_average={85} />
+        <MovieHeader>
+            <Chart vote_average={vote_average && Math.round(vote_average * 10) / 10} />
             <span>
-                <img
-                    src="https://flagcdn.com/h24/us.png"
-                    srcset="https://flagcdn.com/h48/us.png 2x"
+                {
+                    (production_countries && production_countries.length !== 0) && <img
+                        src={`https://flagcdn.com/h24/${production_countries[0].iso_3166_1.toLowerCase()}.png`}
                     height="24"
-                    alt="United States" /> US
+                        alt={`${production_countries[0].name}`} />
+                }
             </span>
-            <h4>Diciembre 12 del 2021 </h4>
-            <h1>Spider-Man: No Way Home</h1>
-            <ul class="list-genres">
-                <li>Action</li> <span>&#x2022;</span>
-                <li>Adventure</li> <span>&#x2022;</span>
-                <li>Science Fiction</li>
-            </ul>
-            <p>Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means
-                to be Spider-Man.</p>
-            <div><i class="fa-solid fa-stopwatch"></i>
-                <h4>2h 30 min</h4>
-            </div>
+            <h4>{release_date && date(release_date)}</h4>
+            {
+                type === 'movie' ? <h1>{title}</h1> : <h1>{name}</h1>
+            }
+            <ListGenre>
 
-        </section>
+                {
+                    genres && genres.slice(0, 3).map((genre) => <li key={genre.id}>{genre.name} </li>)
+                }
+
+            </ListGenre>
+            <p>{overview}</p>
+            <div>
+
+                {
+                    type === 'movie' && <>
+                        <FaStopwatch /><h4>{runtime} min</h4>
+                    </>
+                }
+
+            </div>
+        </MovieHeader>
     )
 }

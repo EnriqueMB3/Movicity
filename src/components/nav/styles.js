@@ -43,7 +43,7 @@ export const Nav = styled.nav`
         }
     @media (max-width: 720px) {
         color: white;
-        z-index: 2;
+        z-index: 200;
         padding: 0;
         margin: 0;
         svg{

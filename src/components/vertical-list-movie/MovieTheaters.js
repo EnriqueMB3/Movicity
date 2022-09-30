@@ -10,7 +10,7 @@ export const MovieTheaters = ({movie}) => {
 
   return (
     <li>
-      <Link to={`/movie/${id}`}>
+      <Link to={`/title/movie/${id}`}>
         <img src={`http://image.tmdb.org/t/p/w500/${poster_path}`} alt="cartelera" />
       </Link>
     </li>

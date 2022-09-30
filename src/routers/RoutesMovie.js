@@ -1,6 +1,5 @@
 import React from 'react'
-import { Routes, Route, Navigate} from "react-router-dom";
-import { CategoryStartScreen } from '../screens/CategoryStartScreen';
+import { Routes, Route, Navigate } from "react-router-dom";
 import { HomeScreen } from '../screens/HomeScreen';
 import { MovieScreen } from '../screens/MovieScreen';
 import { TitleScreen } from '../screens/TitleScreen';
@@ -14,8 +13,8 @@ export const RoutesMovie = () => {
                 <Route path="/Tv"  element={<TvScreen />} />
                 <Route path="/Movies"  element={<MovieScreen />} />
                 <Route path="/" element={<HomeScreen />} />
-                <Route path="movie/:id" element={<TitleScreen />} />
-                
+                <Route path="/title/:type/:id" element={<TitleScreen />} />
+
             </Routes>
         </>
 
