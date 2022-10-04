@@ -10,6 +10,7 @@ const fetchConToken = async(endpoint, method = 'GET', language='en-US', page='1'
                 'Accept': 'application/json'
             }
         });
+    console.log(req);
     const json = await req.json();
     return json;
 }
