@@ -7,6 +7,7 @@ const fetchConToken = async(endpoint, method = 'GET', language='en-US', page='1'
             method,
             headers: {
                 'Content-type': 'application/json',
+                'Accept': 'application/json'
             }
         });
     const json = await req.json();
