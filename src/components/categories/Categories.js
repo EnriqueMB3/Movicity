@@ -1,4 +1,4 @@
-import { FaBook, FaBookReader, FaBrain, FaCat, FaDragon, FaGlobeEurope, FaHatCowboySide, FaHeart, FaLandmark, FaLeaf, FaMusic, FaPalette, FaPizzaSlice, FaRedhat, FaRegGrinSquintTears, FaRocket, FaShieldAlt, FaSkull, FaSpaceShuttle, FaSpider, FaTheaterMasks, FaVolleyballBall } from "react-icons/fa";
+import { FaBook, FaBookReader, FaBrain, FaCat, FaDragon, FaGlobeEurope, FaHeart, FaLandmark, FaLeaf, FaMusic, FaPalette, FaPizzaSlice, FaRedhat, FaRegGrinSquintTears, FaRegMehBlank, FaRocket, FaShieldAlt, FaSkull, FaSpaceShuttle, FaSpider, FaTheaterMasks, FaVolleyballBall } from "react-icons/fa";
 
 export const Categories = [
     [
@@ -78,8 +78,8 @@ export const Categories = [
         },
         {
             id:295505,
-            name: 'Western',
-            icon: <FaHatCowboySide/>,
+            name: 'Thriller',
+            icon: <FaRegMehBlank />,
             selected: false   
         },
         {

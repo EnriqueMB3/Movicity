@@ -10,7 +10,6 @@ const fetchConToken = async(endpoint, method = 'GET', language='en-US', page='1'
                 'Accept': 'application/json'
             }
         });
-    console.log(process.env.REACT_APP_API_URL)
     const json = await req.json();
     return json;
 }
