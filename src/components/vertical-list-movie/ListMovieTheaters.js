@@ -13,7 +13,7 @@ export const ListMovieTheaters = ({title= 'In Theaters' ,type='movie', category=
     const [moviesdb, setMoviesdb] = useState([])
     
     const getMovies = async ()=> {
-        const response = await fetchConToken(`${type}/${category}`);
+        const response = type === 'trend' ? await fetchConToken('/trending/all/day') : await fetchConToken(`${type}/${category}`);
         setMoviesdb(response.results)
     }
 

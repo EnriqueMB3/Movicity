@@ -14,7 +14,7 @@ export const HeaderHome = ({type= 'movie',  category = 'popular'}) => {
 const [moviedb, setMoviedb] = useState()
 
   const innerFunction = useCallback(async() => {
-      const responseMovies = await fetchConToken(`${type}/${category}`).then((res)=> res.results[0]) ;
+    const responseMovies = await fetchConToken(`${type}/${category}`).then((res) => res.results[0]);
       const {original_title, overview, id, name} = responseMovies
       const MovieImage = await fetchConToken(`${type}/${id}/images`).then((res)=> imagesMovie(res));
       const movieImagesDesc = {name, original_title, overview, id, ...MovieImage};
@@ -33,7 +33,7 @@ const [moviedb, setMoviedb] = useState()
       <Sidebar isShowing={isShowing} toggle={toggle} />
 
       <Navbar  isShowing={isShowing}toggle={toggle}/>
-      <HeaderTitle logo={`${moviedb && `${moviedb.logo}`}`} overview={ moviedb && moviedb.overview } original_title={moviedb && (moviedb.original_title || moviedb.name)}/>
+      <HeaderTitle logo={`${moviedb && `${moviedb.logo}`}`} type={type} overview={moviedb && moviedb.overview} original_title={moviedb && (moviedb.original_title || moviedb.name)} id={moviedb && moviedb.id} />
       <Degrade header={false} />
 
     </Header>

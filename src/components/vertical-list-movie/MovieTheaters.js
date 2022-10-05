@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 
 export const MovieTheaters = ({movie}) => {
 
-  const { poster_path, id } = movie;
+  const { poster_path, id, media_type } = movie;
 
 
   return (
     <li>
-      <Link to={`/title/movie/${id}`}>
+      <Link to={`/title/${media_type || 'movie'}/${id}`}>
         <img src={`http://image.tmdb.org/t/p/w500/${poster_path}`} alt="cartelera" />
       </Link>
     </li>
