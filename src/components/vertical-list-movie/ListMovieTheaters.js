@@ -35,7 +35,7 @@ export const ListMovieTheaters = ({title= 'In Theaters' ,type='movie', category=
                     moviesdb.length == 0? 
                         movies.map( (_, idx) => <SkeletonTheaters key={idx}/> )
                     :
-                        moviesdb.map( (movie, idx) => <MovieTheaters key={idx} movie={movie} /> )
+                        moviesdb.map((movie, idx) => <MovieTheaters key={idx} movie={movie} type={type} />)
 
                 }
             </ListVerticalMovie>

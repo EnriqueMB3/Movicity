@@ -34,7 +34,7 @@ export const ListTopRanked = ({type='movie', category='top_rated'}) => {
                     moviesdb.length == 0? 
                     top.map( (_, idx) => <SkeletonTopRanked key={idx}/> )
                     :
-                        moviesdb.map( (topRanked, idx) => <TopRanked key={idx} topRanked={topRanked}/> )
+            moviesdb.map((topRanked, idx) => <TopRanked key={idx} topRanked={topRanked} type={type} />)
 
         }
         </ListTopRankedImages>

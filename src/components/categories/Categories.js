@@ -102,7 +102,7 @@ export const Categories = [
             selected: false
         },
         {
-            id:285725,
+            id: 267848,
             name: 'Animals',
             icon: <FaCat/>,
             selected: false

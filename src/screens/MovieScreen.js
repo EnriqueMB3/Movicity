@@ -17,10 +17,10 @@ export const MovieScreen = () => {
       <ListTitleHorizontal title={categoriesSelected[0].name} type={'movie'} icon={categoriesSelected[0].icon} category={categoriesSelected[0].id} keyword={true} />
 
 
+      <ListMovieTheaters title="Upcoming" type="movie" category="upcoming" icon={<FaFilm />} />
       <ListTitleHorizontal title={categoriesSelected[2].name} type={'movie'} icon={categoriesSelected[2].icon} category={categoriesSelected[2].id} keyword={true} />
       <ListTopRanked />
 
-      <ListMovieTheaters title="Upcoming" type="movie" category="upcoming" icon={<FaFilm />} />
 
 
   </>
