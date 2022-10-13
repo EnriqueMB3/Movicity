@@ -45,5 +45,6 @@ p{
 }
 a{
   text-decoration: none;
+  color:white;
 }
 `

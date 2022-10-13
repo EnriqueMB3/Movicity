@@ -62,6 +62,4 @@ export const ListVerticalMovie = styled.ul`
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-
-
 `

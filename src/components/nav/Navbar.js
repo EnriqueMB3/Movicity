@@ -25,9 +25,9 @@ export const Navbar = ({isShowing, toggle}) => {
       }, []);
   
       const listenScrollEvent = (event) => {
-        if (window.scrollY < 70) {
+          if (window.scrollY < 90) {
             return setHeaderColor("transparent")
-        } else if (window.scrollY > 280) {
+          } else if (window.scrollY > 250) {
             return setHeaderColor("#1a1a1a")
         } 
       }

@@ -68,11 +68,55 @@ export const PeopleProfile = styled.div`
     }
     h2{
         font-size: 1.2em;
+        color:'white';
     }
     @media (max-width: 720px) {
         height: 20em;
         width: 12em;
         padding: 1em;
     }
-    
+`
+
+export const PeopleSection = styled.div`
+    position: relative;
+    top: 70px; 
+    margin-left: 4em; 
+    margin-bottom: 80px; 
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    /* flex-wrap:wrap; */
+    gap: 1rem;
+    h1{
+        color:white;
+        font-size: 7em;
+        margin-bottom:.2em;
+    }
+    h2, h3{
+        color: var(--main-yellow);
+        
+    }
+    h3{
+        font-weight:lighter;
+        margin-bottom:1em;
+    }
+    z-index:-1;
+    img{
+        height: 38em;
+    }
+    @media (max-width: 720px) {
+        grid-template-columns: 1fr; 
+        margin-left: 2em; 
+        justify-items: center;
+        padding: 1em;
+        margin-bottom: 40px; 
+        h1{
+            font-size: 3em;
+        }
+        img{
+            height: 30em;
+            margin-left: -2em; 
+    z-index:-1;
+
+        }
+    }
 `

@@ -14,7 +14,8 @@ export const ListMovieTheaters = ({title= 'In Theaters' ,type='movie', category=
     
     const getMovies = async ()=> {
         const response = type === 'trend' ? await fetchConToken('/trending/all/day') : await fetchConToken(`${type}/${category}`);
-        setMoviesdb(response.results)
+        type === 'person' ? setMoviesdb(response.cast) : setMoviesdb(response.results)
+
     }
 
     useEffect(() => {
