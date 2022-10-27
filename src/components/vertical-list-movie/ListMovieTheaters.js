@@ -14,8 +14,12 @@ export const ListMovieTheaters = ({title= 'In Theaters' ,type='movie', category=
     
     const getMovies = async ()=> {
         const response = type === 'trend' ? await fetchConToken('/trending/all/day') : await fetchConToken(`${type}/${category}`);
-        type === 'person' ? setMoviesdb(response.cast) : setMoviesdb(response.results)
+        type === 'person' ? setMoviesdb(filterImages(response.cast)) : setMoviesdb(filterImages(response.results))
 
+    }
+
+    const filterImages = (results) => {
+        return results.filter((title) => title.poster_path);
     }
 
     useEffect(() => {

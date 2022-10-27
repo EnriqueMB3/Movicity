@@ -11,7 +11,7 @@ export const Nav = styled.nav`
             display: flex;
             flex-direction: row;
             align-items: center;
-            position: fixed;
+            position: ${({ position }) => position };
             gap: 20px;
             width: 100%;
             padding: .5em 2em .5em 4em;
@@ -53,7 +53,7 @@ export const Nav = styled.nav`
         }
         ul{
             background-color: ${({backColor}) => backColor };
-            position: fixed;
+            position: ${({ position }) => position };
             padding: .5em 1.5em .5em 1.5em;
             display: flex;
         }

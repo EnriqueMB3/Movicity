@@ -8,7 +8,9 @@ import { Search } from '../shared/Search';
 export const Navbar = ({isShowing, toggle}) => {
 
 
-    const [headerColor, setHeaderColor] = useState("transparent")
+  const [headerColor, setHeaderColor] = useState("transparent")
+  const [position, setPosition] = useState("block")
+
     useEffect(() => {
         listenScrollEvent();
         window.addEventListener('scroll', listenScrollEvent);
@@ -25,10 +27,14 @@ export const Navbar = ({isShowing, toggle}) => {
       }, []);
   
       const listenScrollEvent = (event) => {
-          if (window.scrollY < 90) {
-            return setHeaderColor("transparent")
-          } else if (window.scrollY > 250) {
-            return setHeaderColor("#1a1a1a")
+        if (window.scrollY < 130) {
+          setHeaderColor("transparent")
+          setPosition('block')
+
+        } else if (window.scrollY > 150) {
+          setHeaderColor("#1a1a1a")
+          setPosition('fixed')
+
         } 
       }
 
@@ -38,7 +44,7 @@ export const Navbar = ({isShowing, toggle}) => {
     }
   
   return (
-    <Nav Show={!isShowing} backColor={headerColor}>
+    <Nav Show={!isShowing} backColor={headerColor} position={position}>
         <ul >
             <li>
                 <NavLink to='/' > 

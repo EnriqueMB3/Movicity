@@ -79,11 +79,10 @@ export const PeopleProfile = styled.div`
 
 export const PeopleSection = styled.div`
     position: relative;
-    top: 70px; 
     margin-left: 4em; 
-    margin-bottom: 80px; 
+    margin-bottom: 40px; 
     display: grid;
-    grid-template-columns: 1fr auto; 
+    grid-template-columns: auto 1fr; 
     /* flex-wrap:wrap; */
     gap: 1rem;
     h1{
@@ -102,6 +101,7 @@ export const PeopleSection = styled.div`
     z-index:-1;
     img{
         height: 38em;
+        border-radius: 4px;
     }
     @media (max-width: 720px) {
         grid-template-columns: 1fr; 

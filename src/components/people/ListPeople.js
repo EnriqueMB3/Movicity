@@ -12,8 +12,9 @@ export const ListPeople = () => {
   const [peopledb, setPeopledb] = useState([])
     
   const getPeople = async ()=> {
-      const response = await fetchConToken(`${typesdb.person}/${typesdb.popular}`);
-      setPeopledb(response.results)
+    const response = await fetchConToken(`${typesdb.person}/${typesdb.popular}`);
+    const withImages = response.results.filter((person) => person.profile_path);
+    setPeopledb(withImages)
   }
 
   useEffect(() => {

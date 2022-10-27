@@ -54,7 +54,7 @@ export const SearchBar = styled.div`
       input[type="text"]{
         width:15px;
         background:transparent;
-        transition:border .3s 0s, width .2s .3s cubic-bezier(0.225, 0.010, 0.475, 1.010), text-indent .2s .3s;
+        transition:border .1s 0s, width .1s .3s cubic-bezier(0.225, 0.010, 0.475, 1.010), text-indent .1s .2s;
         padding: 15px;
         border-color:var(--main-yellow);
         text-indent:30px;
@@ -160,4 +160,15 @@ export const PieChart = styled.svg`
   }
 } */
 
+`
+
+export const HeaderSearch = styled.h1`
+  margin-left:2em;
+  color: white;
+  b{
+    color:var(--main-yellow);
+  }
+  @media (max-width: 720px) {
+    margin-left: 1em;
+    }
 `
