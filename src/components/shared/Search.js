@@ -5,6 +5,7 @@ import { useComponentVisible } from '../../hooks/useComponentVisible';
 import { useForm } from '../../hooks/useForm';
 import { SearchBar } from './styles'
 import queryString from 'query-string'
+import useSidebar from '../../hooks/useSidebar';
 
 
 
@@ -30,6 +31,7 @@ export const Search = ({number}) => {
   const onSubmit = (e) => {
     e.preventDefault();
     navigate(`/results/?q=${searchText}`);
+
   }
 
   return (

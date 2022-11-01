@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import queryString from 'query-string'
 import { Sidebar } from '../components/sidebar/Sidebar';
@@ -13,10 +13,15 @@ import { SkeletonSearch } from '../components/search-list/SkeletonSearch';
 
 
 export const ResultScreen = () => {
+
+    const { isShowing, toggle, setIsShowing } = useSidebar();
     const location = useLocation();
     const { q } = queryString.parse(location.search);
     const { titlesdb, isLoading } = useTitlesSearch(q);
-    const { isShowing, toggle } = useSidebar();
+    useEffect(() => {
+        setIsShowing(false);
+
+    }, [titlesdb])
 
 
 

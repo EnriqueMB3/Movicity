@@ -10,6 +10,7 @@ const useSidebar = () => {
   return {
     isShowing,
     toggle,
+    setIsShowing
   }
 };
 

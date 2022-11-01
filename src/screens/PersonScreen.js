@@ -13,13 +13,12 @@ export const PersonScreen = () => {
 
     const { isShowing, toggle } = useSidebar();
 
-    const { id, type } = useParams();
+    const { id } = useParams();
     const [persondb, setPerson] = useState([])
 
     const getPerson = async () => {
 
         const response = await fetchConToken(`person/${id}`);
-        console.log(response)
         setPerson(response)
     }
 

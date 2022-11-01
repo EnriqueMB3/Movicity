@@ -7,7 +7,7 @@ export const SkeletonSearch = () => {
     return (
         <BoardMediaTitles>
             {
-                movies.map((n) => <li>
+                movies.map((n) => <li key={n}>
                     <ImgSkeleton />
                     <SubTitleSkeleton />
                     <TitleSkeleton />
